@@ -2,15 +2,14 @@
 {
     partial class TrafficLightControl
     {
-        /// <summary> 
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBoxTrafficLight;
 
         /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">True if managed resources should be disposed; otherwise, False.</param>
+        /// <param name="disposing">True if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,73 +19,43 @@
             base.Dispose(disposing);
         }
 
-        #region Designer generated code
+        #region Windows Form Designer generated code
 
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            timer1 = new System.Windows.Forms.Timer(components);
-            pictureBoxRed = new PictureBox();
-            pictureBoxYellow = new PictureBox();
-            pictureBoxGreen = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxRed).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxYellow).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxGreen).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBoxTrafficLight = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTrafficLight)).BeginInit();
+            this.SuspendLayout();
+
             // 
             // timer1
             // 
-            timer1.Interval = 1000;
-            timer1.Tick += timer1_Tick;
+            this.timer1.Interval = 1000; // 1 second
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+
             // 
-            // pictureBoxRed
+            // pictureBoxTrafficLight
             // 
-            pictureBoxRed.BackgroundImage = Properties.Resources.red;
-            pictureBoxRed.Location = new Point(10, 10);
-            pictureBoxRed.Name = "pictureBoxRed";
-            pictureBoxRed.Size = new Size(81, 100);
-            pictureBoxRed.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBoxRed.TabIndex = 0;
-            pictureBoxRed.TabStop = false;
-            // 
-            // pictureBoxYellow
-            // 
-            pictureBoxYellow.BackgroundImage = Properties.Resources.yellow_;
-            pictureBoxYellow.Location = new Point(10, 120);
-            pictureBoxYellow.Name = "pictureBoxYellow";
-            pictureBoxYellow.Size = new Size(81, 100);
-            pictureBoxYellow.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBoxYellow.TabIndex = 1;
-            pictureBoxYellow.TabStop = false;
-            // 
-            // pictureBoxGreen
-            // 
-            pictureBoxGreen.BackgroundImage = Properties.Resources.greenpng;
-            pictureBoxGreen.Location = new Point(10, 230);
-            pictureBoxGreen.Name = "pictureBoxGreen";
-            pictureBoxGreen.Size = new Size(81, 100);
-            pictureBoxGreen.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBoxGreen.TabIndex = 2;
-            pictureBoxGreen.TabStop = false;
+            this.pictureBoxTrafficLight.Location = new System.Drawing.Point(10, 10); // Position of the picture box
+            this.pictureBoxTrafficLight.Name = "pictureBoxTrafficLight";
+            this.pictureBoxTrafficLight.Size = new System.Drawing.Size(100, 200); // Adjust to fit the image size
+            this.pictureBoxTrafficLight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage; // Ensure the image scales to fit the picture box
+            this.pictureBoxTrafficLight.TabIndex = 0;
+            this.pictureBoxTrafficLight.TabStop = false;
+
             // 
             // TrafficLightControl
             // 
-            Controls.Add(pictureBoxRed);
-            Controls.Add(pictureBoxYellow);
-            Controls.Add(pictureBoxGreen);
-            Name = "TrafficLightControl";
-            Size = new Size(210, 340);
-            ((System.ComponentModel.ISupportInitialize)pictureBoxRed).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxYellow).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxGreen).EndInit();
-            ResumeLayout(false);
+            this.Controls.Add(this.pictureBoxTrafficLight);
+            this.Name = "TrafficLightControl";
+            this.Size = new System.Drawing.Size(120, 220); // Size of the control area
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTrafficLight)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox pictureBoxRed;
-        private System.Windows.Forms.PictureBox pictureBoxYellow;
-        private System.Windows.Forms.PictureBox pictureBoxGreen;
     }
 }

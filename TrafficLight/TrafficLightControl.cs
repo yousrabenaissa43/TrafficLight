@@ -22,22 +22,15 @@ namespace TrafficLight
             switch (currentState)
             {
                 case 0: // Red
-                    pictureBoxRed.Visible = true;
-                    pictureBoxYellow.Visible = false;
-                    pictureBoxGreen.Visible = false;
+                    pictureBoxTrafficLight.Image = Properties.Resources.red; // Set Red image
                     break;
                 case 1: // Yellow
-                    pictureBoxRed.Visible = false;
-                    pictureBoxYellow.Visible = true;
-                    pictureBoxGreen.Visible = false;
+                    pictureBoxTrafficLight.Image = Properties.Resources.yellow; // Set Yellow image
                     break;
                 case 2: // Green
-                    pictureBoxRed.Visible = false;
-                    pictureBoxYellow.Visible = false;
-                    pictureBoxGreen.Visible = true;
+                    pictureBoxTrafficLight.Image = Properties.Resources.green; // Set Green image
                     break;
             }
         }
     }
-
 }

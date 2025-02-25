@@ -34,7 +34,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.street;
+            
             ClientSize = new Size(689, 525);
             Name = "Street";
             Text = "Street";
