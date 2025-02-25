@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace TrafficLight
 {
-    public partial class Street: Form
+    public partial class Street : Form
     {
+        private TrafficLightControl trafficLight;
         public Street()
         {
             InitializeComponent();
         }
+
+        
     }
 }
